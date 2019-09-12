@@ -1,0 +1,15 @@
+#!/bin/bash
+mkdir first_dir
+mkdir second_dir
+nums=$1
+half=2
+
+for fid in $(seq 1 $((nums/2)));
+do
+touch "first_dir/""file_""$fid"".txt";
+done
+
+for fid in $(seq $(((nums/2)+1)) $nums);
+do
+touch "second_dir/""file_""$fid"".txt";
+done
